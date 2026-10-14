@@ -25,4 +25,4 @@ class DeribitClient:
         try:
             return Decimal(str(payload["result"]["index_price"]))
         except (KeyError, TypeError, InvalidOperation) as exc:
-            raise DeribitClientError(f"Request for {ticker} failed: {exc!r}") from exc
+            raise DeribitClientError(f"Unexpected response for {ticker}: {payload}") from exc
