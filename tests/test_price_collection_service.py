@@ -4,7 +4,7 @@ from decimal import Decimal
 import pytest
 
 from app.clients.deribit import DeribitClientError
-from app.services.price_service import PriceCollectionService
+from app.services.price_collection_service import PriceCollectionService
 from tests.fakes import FakeDeribitClient, FakePriceRepository
 
 FIXED_TIME = 1_700_000_000.9
