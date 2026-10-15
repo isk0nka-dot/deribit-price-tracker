@@ -8,7 +8,7 @@ from app.clients.deribit import DeribitClient
 from app.config import Settings
 from app.db.session import Database
 from app.repositories.price_repository import PriceRepository
-from app.services.price_service import PriceCollectionService
+from app.services.price_collection_service import PriceCollectionService
 
 FETCH_PRICES_TASK_NAME = "prices.fetch"
 REQUEST_TIMEOUT_SECONDS = 10
