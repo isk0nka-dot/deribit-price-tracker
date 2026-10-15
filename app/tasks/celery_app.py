@@ -1,5 +1,5 @@
 from celery import Celery
-
+from app.tickers import Ticker
 from app.config import Settings
 from app.db.session import Database
 from app.tasks.fetch_prices import (
@@ -8,7 +8,7 @@ from app.tasks.fetch_prices import (
     register_fetch_prices_task,
 )
 
-TICKERS = ("btc_usd", "eth_usd")
+TICKERS = tuple(ticker.value for ticker in Ticker)
 FETCH_INTERVAL_SECONDS = 60.0
 
 
